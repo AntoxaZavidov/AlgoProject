@@ -10,7 +10,6 @@ class GameSprite(sprite.Sprite):
      # каждый спрайт должен хранить свойство image - изображение
      self.image = transform.scale(image.load(player_image), (size_x, size_y))
 
-
      # каждый спрайт должен хранить свойство rect - прямоугольник, в который он вписан
      self.rect = self.image.get_rect()
      self.rect.x = player_x
@@ -18,7 +17,6 @@ class GameSprite(sprite.Sprite):
  # метод, отрисовывающий героя на окне
  def reset(self):
      window.blit(self.image, (self.rect.x, self.rect.y))
-
 
 #класс главного игрока
 class Player(GameSprite):
